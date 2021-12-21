@@ -1,9 +1,7 @@
 fn main() {
-    println!("Hello, world!");
+    let a = [10, 20, 30, 40, 50];
 
-    another_function();
-}
-
-fn another_function() {
-    println!("Another function.");
+    for element in a {
+        println!("the value is: {}", element);
+    }
 }
