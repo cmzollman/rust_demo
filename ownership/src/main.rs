@@ -1,3 +1,10 @@
+/* Ownership Rules
+First, let’s take a look at the ownership rules. Keep these rules in mind as we work through the examples that illustrate them:
+
+1. Each value in Rust has a variable that’s called its owner.
+2. There can only be one owner at a time.
+3. When the owner goes out of scope, the value will be dropped. */
+
 fn main() {
     let s1 = gives_ownership();         // gives_ownership moves its return
                                         // value into s1
