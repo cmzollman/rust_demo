@@ -1,10 +1,23 @@
+#[derive(Debug)]
+enum UsState {
+    Alabama,
+    Alaska,
+    // --snip--
+}
+
+enum Coin {
+    Penny,
+    Nickel,
+    Dime,
+    Quarter(UsState),
+}
+
 fn main() {
-    enum IpAddr {
-        V4(String),
-        V6(String),
+    let coin = Coin::Penny;
+    let mut count = 0;
+    if let Coin::Quarter(state) = coin {
+        println!("State quarter from {:?}!", state);
+    } else {
+        count += 1;
     }
-
-    let home = IpAddr::V4(String::from("127.0.0.1"));
-
-    let loopback = IpAddr::V6(String::from("::1"));
 }
